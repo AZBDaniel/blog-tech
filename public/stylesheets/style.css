@@ -12,7 +12,7 @@ body, html {
 
 a {
   text-decoration: none;
-  color: #225ca3;
+  color: brown;
   font-weight: bold;
   transition: color .1s;
 }
@@ -37,6 +37,7 @@ button:hover {
 }
 
 .post-list {
+  list-style-type: none;
   margin: 0;
   padding: 0;
 }
@@ -80,10 +81,24 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 1%;
+  background-color: brown;
 }
 
 header h1 {
-  font-size: 1em;
+  font-size: 2em;
+  background-color: gainsboro;
+}
+
+nav a {
+  color: gainsboro;
+}
+
+.title {
+  display: flex;
+justify-content: space-between;
+padding: 0 10px;
+  color: gainsboro;
+  background-color: brown;
 }
 
 main {
@@ -97,7 +112,7 @@ main {
   padding: 0;
   cursor: pointer;
   text-decoration: none;
-  color: #225ca3;
+  color: gainsboro;
   font-size: 100%;
   font-weight: bold;
   transition: color .1s;
