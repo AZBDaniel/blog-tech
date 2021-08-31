@@ -43,7 +43,7 @@ To use this application you can become a member at the hosted site ("Which is us
 
 
 ## Walkthrough or Screenshot
-![alt text](public/images/HomePage.PNG 'Home Page')
+![alt text](public/images/homePage.PNG 'Home Page')
 ![alt text](public/images/signupLogin.PNG 'Sign Up Login Page')
 ![alt text](public/images/userDashboard.PNG 'Member Dashboard')
 ![alt text](public/images/userComment.PNG 'Member Comment')
