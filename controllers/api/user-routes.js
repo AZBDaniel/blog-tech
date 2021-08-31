@@ -13,6 +13,8 @@ router.get('/', (req, res) => {
     });
 });
 
+
+//get one user by id, include their post, and comments
 router.get('/:id', (req, res) => {
   User.findOne({
     attributes: { exclude: ['password'] },
@@ -45,8 +47,8 @@ router.get('/:id', (req, res) => {
     });
 });
 
+//creates a new user with entry of username, email, and password
 router.post('/', (req, res) => {
-  // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
   User.create({
     username: req.body.username,
     email: req.body.email,
@@ -67,8 +69,9 @@ router.post('/', (req, res) => {
     });
 });
 
+
+//allow user to login
 router.post('/login', (req, res) => {
-  // expects {email: 'lernantino@gmail.com', password: 'password1234'}
   User.findOne({
     where: {
       email: req.body.email
@@ -96,6 +99,7 @@ router.post('/login', (req, res) => {
   });
 });
 
+//allow user to logout
 router.post('/logout', (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {
@@ -107,10 +111,8 @@ router.post('/logout', (req, res) => {
   }
 });
 
+//update user id
 router.put('/:id', (req, res) => {
-  // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
-
-  // pass in req.body instead to only update what's passed through
   User.update(req.body, {
     individualHooks: true,
     where: {
@@ -130,6 +132,7 @@ router.put('/:id', (req, res) => {
     });
 });
 
+//deletes a user
 router.delete('/:id', (req, res) => {
   User.destroy({
     where: {
